@@ -780,7 +780,7 @@ figure:hover+span {
 
 .contact_section {
     width: 100%;
-    float: left;
+    float: right;
     padding-bottom: 90px;
 }
 
@@ -808,7 +808,7 @@ figure:hover+span {
 }
 
 .padding_right_0 {
-    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .mail_section_1 {
@@ -846,7 +846,8 @@ figure:hover+span {
 .send_bt {
     width: 170px;
     margin: 0 auto;
-    text-align: center;
+    /* text-align: right; */
+    margin-top: ;
 }
 
 .send_bt a {
@@ -857,7 +858,7 @@ figure:hover+span {
     background-color: #6cbd15;
     padding: 12px;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 50px;
     display: block;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
@@ -1044,3 +1045,49 @@ figure:hover+span {
 .margin_top90 {
     margin-top: 90px;
 }
+
+.submit-button a {
+    background-color: #6cbd15;
+    margin-top: 20px;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .col-md-6.padding_right_0 {
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .button-container {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .submit-button, .register-button {
+    display: inline-block;
+  }
+  
+  .submit-button a, .register-button a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #6cbd15;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .register-button {
+    margin-left: 10px;
+  }
+  
+  
