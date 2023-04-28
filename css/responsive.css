@@ -3,213 +3,555 @@
 
 /*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
 
-@media (min-width: 1200px) and (max-width: 1342px) {
-    .solutions_img {
-        margin-right: 0;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-search {
+        padding: 15px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+    .logo {
+        text-align: center;
+    }
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .mg {
+        margin: 0px 0px;
+    }
+    .menu-area-main {
+        height: 256px;
+        overflow-y: auto;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        height: 19px;
+    }
+    .category-box.women-box {
+        display: none;
+    }
+    .cart-box {
+        display: inline-block;
+        margin: 0px 30px;
+    }
+    .wish-box {
+        float: none;
+        margin: 0px 30px;
+        display: inline-block;
+    }
+    .menu-add {
+        display: none;
+    }
+    .category-box {
+        display: none;
+    }
+    .mean-container .mean-nav ul li ol {
+        padding: 0px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 10px 20px;
+        width: 94.8%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 92%;
+        padding: 1em 4%;
+    }
+    .mean-container .mean-nav ul li li li a {
+        width: 100%;
+    }
+    .header-search {
+        padding: 15px 0px;
+    }
+    #collapseFilter.d-md-block {
+        padding: 30px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 1em 4%;
+        width: 92%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 90%;
+        padding: 1em 5%;
+    }
+    .mean-container .sub-full.megamenu-categories ol li a {
+        padding: 5px 0px;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
+        width: auto;
+        border: none;
+        float: none;
+    }
+    .menu-area-main {
+        height: 45px;
+        overflow-y: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        top: 0;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .banner_main {
-        padding-top: 18%;
+
+    .banner_section{
+        background-size: cover;
     }
-    .text-bg h1 {
-        font-size: 66px;
-        line-height: 87px;
+
+    .games_section {
+        height: 658px;
     }
-    .bann_img {
-        padding-right: 0;
+
+    .video_bt {
+        width: 100%;
+        padding: 164px 0px;
     }
-    .titlepage h2 {
-        font-size: 38px;
+
+    #main_slider a.carousel-control-next {
+        right: -50px;
+        top: 200px;
     }
-    .solutions_img {
-        margin-right: 0;
+
+    #main_slider a.carousel-control-prev {
+        left: -30px;
+        top: 200px;
     }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .banner_main {
-        padding-top: 18%;
+
+    .header_section {
+        background-size: cover;
     }
-    .text-bg h1 {
-        font-size: 47px;
-        line-height: 69px;
+    .navbar-expand-lg {
+        padding: 15px 0px;
     }
-    .bann_img {
-        padding-right: 0px;
+
+    .login_btn {
+        display: none;
     }
-    .titlepage h2 {
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
+    }
+    .navbar {
+        padding: 10px 0px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+    }
+    .banner_section {
+        padding: 30px 0px;
+    }
+    .banner_taital {
+        width: 50%;
+        font-size: 50px;
+        line-height: normal;
+    }
+    .banner_text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px 120px 0px;
+    }
+
+    .banner_section::after {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .carousel-indicators {
+        bottom: -70px;
+    }
+
+    .games_taital {
         font-size: 30px;
-        line-height: 41px;
     }
-    .multipurpose h3 {
-        font-size: 70px;
-        line-height: 90px;
+
+    .games_section{
+        height: auto;
+        margin-bottom: 0px;
     }
-    .solutions_img {
-        margin-right: 0;
+
+    .video_bt {
+        padding: 109px 0px;
     }
-    .contac_detel ul li img {
-        margin-right: 27px;
-    }
-    .contac_detel ul li {
+
+    .client_taital {
         font-size: 30px;
     }
+
+    #main_slider a.carousel-control-next {
+        right: -60px;
+        top: 560px;
+        left: 0px;
+    }
+
+    #main_slider a.carousel-control-prev {
+        left: -60px;
+        top: 560px;
+        right: 0px;
+    }
+
+    #main_slider .carousel-control-next, 
+    #main_slider .carousel-control-prev {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .box_main {
+        width: 100%;
+        float: left;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .customer_left {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_right {
+        width: 100%;
+        float: left;
+        padding-top: 270px;
+    }
+
+    .customer_img {
+        top: 0px;
+        left: 20px;
+    }
+
+    .enim_text {
+        font-size: 14px;
+    }
+
+    .mail_section_1 {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_main {
+        display: block;
+    }
+
+    .contact_img {
+        margin-top: 80px;
+    }
+
+    .padding_right_0 {
+        padding: 0px;
+    }
+
+    figure img {
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .text-bg {
-        padding-top: 73px;
+
+    .header_section {
+        background-size: cover;
     }
-    .text-bg h1 {
-        font-size: 57px;
-        line-height: 81px;
+    .navbar-expand-lg {
+        padding: 15px 0px;
     }
-    .text-bg a {
-        margin-bottom: 30px;
-        max-width: 250px;
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
     }
-    .titlepage h2 {
-        font-size: 38px;
+    .navbar {
+        padding: 10px 0px;
     }
-    .service .titlepage {
-        padding-left: 0;
-        padding-top: 40px;
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
     }
-    .service_img {
-        padding-left: 0px;
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0px 10px 0px;
+        text-align: center;
     }
-    .sm_none {
+
+    .login_btn {
         display: none;
     }
-    .sm_show {
+    .banner_section {
+        padding: 30px 0px;
+    }
+    .banner_taital {
+        width: 60%;
+        font-size: 30px;
+        line-height: normal;
+    }
+    .banner_text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px;
+    }
+
+    .banner_section::after {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .carousel-indicators {
+        bottom: -70px;
+    }
+
+    .games_taital {
+        font-size: 30px;
+    }
+
+    .games_section{
+        height: auto;
+        margin-bottom: 0px;
+    }
+
+    .video_bt {
+        padding: 200px 0px;
+    }
+
+    .client_taital {
+        font-size: 30px;
+    }
+
+    #main_slider a.carousel-control-next {
+        right: -90px;
+        top: 200px;
+        display: none;
+    }
+
+    #main_slider a.carousel-control-prev {
+        left: -90px;
+        top: 200px;
+        display: none;
+    }
+
+    .box_main {
+        width: 100%;
+        float: left;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .customer_left {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_right {
+        width: 100%;
+        float: left;
+        padding-top: 270px;
+    }
+
+    .customer_img {
+        top: 0px;
+        left: 20px;
+    }
+
+    .enim_text {
+        font-size: 14px;
+    }
+
+    .mail_section_1 {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_main {
         display: block;
-        padding-top: 30px;
     }
-    .multipurpose h3 {
-        font-size: 58px;
-        line-height: 70px;
+
+    .contact_img {
+        margin-top: 40px;
     }
-    .solutions_img {
-        margin-right: 0;
-        margin-top: 30px;
+
+    .padding_right_0 {
+        padding: 0px;
     }
-    .navigation.navbar {
-        float: right;
-        display: inherit !important;
-        padding: 0;
+
+    figure img {
         width: 100%;
     }
-    .navigation .navbar-collapse {
-        background: #000;
-        padding: 20px;
-        margin-top: 52px;
-        position: absolute;
-        width: 100%;
-        margin-right: 20px;
-        z-index: 999;
-    }
-    .navigation.navbar-dark .navbar-nav .nav-link {
-        padding: 10px 0;
-    }
-    .navigation.navbar-dark .navbar-toggler {
-        border: inherit;
-        float: right;
-        padding: 0;
-    }
-    .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(../images/menu_icon.png);
-        background-repeat: no-repeat;
-    }
+
 }
 
 @media (max-width: 575px) {
-    .header {
-        padding: 30px 0px;
+
+    .header_section {
+        background-size: cover;
     }
-    .logo {
-        text-align: center !important;
-        padding-bottom: 6px;
-        float: left;
+    .navbar-expand-lg {
+        padding: 15px 0px;
     }
-    .text-bg {
-        padding-top: 84px;
+    .navbar-brand {
+        width: 60%;
+        padding: 0px;
     }
-    .text-bg a {
-        margin-bottom: 30px;
-        max-width: 250px;
+    .navbar {
+        padding: 10px 0px;
     }
-    .text-bg h1 {
-        font-size: 34px;
-        line-height: 53px;
-        padding-bottom: 40px;
+    .navbar-toggler {
+        background-color: #fff;
+        border: 1px solid #fff;
     }
-    .service .titlepage {
-        padding-left: 0;
-        padding-top: 40px;
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0px 10px 0px;
+        text-align: center;
     }
-    .titlepage h2 {
-        font-size: 22px;
-        line-height: 37px;
-    }
-    .about_img {
-        padding: 0;
-    }
-    .multipurpose h3 {
-        font-size: 52px;
-        line-height: 74px;
-    }
-    .multipurpose p {
-        padding-top: 10px;
-    }
-    .contac_detel ul li {
-        font-size: 24px;
-    }
-    .contac_detel ul li img {
-        margin-right: 13px;
-        width: 43px;
-    }
-    .service_img {
-        padding-left: 0px;
-    }
-    .solutions_img {
-        margin-right: 0;
-        margin-top: 30px;
-    }
-    .sm_none {
+
+    .login_btn {
         display: none;
     }
-    .sm_show {
+    .banner_section {
+        padding: 30px 0px;
+    }
+    .banner_taital {
+        width: 60%;
+        font-size: 30px;
+        line-height: normal;
+    }
+    .banner_text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .banner_section {
+        background-size: cover;
+        padding: 90px 0px;
+    }
+
+    .banner_section::after {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .carousel-indicators {
+        bottom: -70px;
+    }
+
+    .games_taital {
+        font-size: 30px;
+    }
+
+    .games_section{
+        height: auto;
+        margin-bottom: 0px;
+    }
+
+    .video_bt {
+        padding: 100px 0px;
+    }
+
+    .client_taital {
+        font-size: 30px;
+    }
+
+    #main_slider a.carousel-control-next {
+        right: -90px;
+        top: 200px;
+        display: none;
+    }
+
+    #main_slider a.carousel-control-prev {
+        left: -90px;
+        top: 200px;
+        display: none;
+    }
+
+    .box_main {
+        width: 100%;
+        float: left;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .customer_left {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_right {
+        width: 100%;
+        float: left;
+        padding-top: 270px;
+    }
+
+    .customer_img {
+        top: 0px;
+        left: 20px;
+    }
+
+    .enim_text {
+        font-size: 14px;
+    }
+
+    .mail_section_1 {
+        width: 100%;
+        float: left;
+    }
+
+    .customer_main {
         display: block;
-        padding-top: 30px;
     }
-    .navigation.navbar {
-        float: right;
-        display: inherit !important;
-        padding: 0;
+
+    .contact_img {
+        margin-top: 40px;
+    }
+
+    .padding_right_0 {
+        padding: 0px;
+    }
+
+    figure img {
         width: 100%;
-        margin-top: -33px;
     }
-    .navigation .navbar-collapse {
-        background: #000;
-        padding: 20px;
-        margin-top: 62px;
-        position: absolute;
-        width: 100%;
-        margin-right: 20px;
-        z-index: 999;
-    }
-    .navigation.navbar-dark .navbar-nav .nav-link {
-        padding: 10px 0;
-    }
-    .navigation.navbar-dark .navbar-toggler {
-        float: right;
-        border: inherit;
-        padding: 0;
-    }
-    .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(../images/menu_icon.png);
-        background-repeat: no-repeat;
-    }
+
 }
