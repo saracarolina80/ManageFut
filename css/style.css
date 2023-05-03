@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    color: #666666;
+    color: black;
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
     line-height: 1.80857;
@@ -213,9 +213,11 @@ button {
 /* header section start */
 
 .header_section {
+    position: relative;
+    z-index: 2;
     width: 100%;
     float: left;
-    background-color: #6cbd15;
+    background-color: #082d12eb;
     height: auto;
     background-size: 100%;
 }
@@ -287,11 +289,11 @@ button {
 .banner_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/neon.jpg);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 150px 0px;
+    padding: 139px 0px;
     z-index: 1;
     position: relative;
 }
@@ -311,15 +313,15 @@ button {
 }
 
 .banner_taital {
-    width: 50%;
+    /* width: 50%; */
     font-size: 70px;
     color: #ffffff;
     font-weight: bold;
-    line-height: 80px;
+    /* line-height: 80px; */
 }
 
 .banner_text {
-    width: 75%;
+    width: 93%;
     font-size: 16px;
     color: #ffffff;
     margin: 0px;
@@ -328,6 +330,7 @@ button {
 .btn_main {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .started_bt {
@@ -341,7 +344,7 @@ button {
     float: left;
     padding: 10px 10px;
     color: #fefefd;
-    background-color: #6cbd15;
+    background-color: #2a4609;
     text-align: center;
     font-size: 16px;
     text-transform: uppercase;
@@ -359,7 +362,7 @@ button {
 
 .carousel-indicators .active {
     background-color: transparent;
-    border: 3px solid #6cbd15;
+    border: 3px solid #2a4609;
 }
 
 .carousel-indicators li {
@@ -429,7 +432,7 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    background-color: #6cbd15;
+    background-color: #2a4609;
     color: #fefefc;
     text-align: center;
     text-transform: uppercase;
@@ -456,7 +459,7 @@ button {
     width: 100%;
     float: left;
     padding: 50px 0px;
-    background-color: #363636;
+    background-color: #021b08f3;
     height: 674px;
     margin-bottom: 52px;
 }
@@ -561,16 +564,16 @@ figure:hover+span {
     width: 100%;
     float: left;
     font-size: 18px;
-    background-color: #6cbd15;
-    color: #fefefc;
+    background-color: #69b016;
+    color: white;
     text-align: center;
     padding: 10px;
     text-transform: uppercase;
 }
 
 .readmore_bt a:hover {
-    color: #fefefc;
-    background-color: #252525;
+    /* color: #fefefc; */
+    background-color: #f0eded;
 }
 
 /* games section end */
@@ -598,68 +601,6 @@ figure:hover+span {
     float: left;
 }
 
-.blog_section_2 {
-    width: 100%;
-    float: left;
-    background-image: url(../images/event-img.png);
-    height: auto;
-    background-size: 100%;
-    padding: 0px 0px 0px 0px;
-}
-
-.blog_img{
-    width: 100%;
-    float: left;
-    background-image: url(../images/blog-img.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.video_bt {
-    width: 100%;
-    padding: 170px 0px;
-}
-
-.play_icon img {
-    width: 80px;
-}
-
-.play_icon {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-    text-align: center;
-}
-
-.play_icon::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 90px;
-    width: 90px;
-    height: 90px;
-    transform: translate(-50%, -50%);
-    background-color: rgb(255, 255, 255, 0.7);
-    border-radius: 100%;
-    animation: fadeEffect 1.3s infinite ease;
-    box-shadow: 0px 0px 10px 0px;
-    right: 0px;
-    margin: 0 auto;
-    z-index: -1;
-}
-
-@keyframes fadeEffect {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1.2);
-        opacity: 0;
-    }
-}
-
 
 /* blog section end */
 
@@ -667,11 +608,11 @@ figure:hover+span {
 
 .client_section {
     width: 100%;
-    float: left;
+    /* float: left; */
 }
 .client_taital{
-    width: 100%;
-    float: left;
+    /* width: 100%; */
+    /* float: left; */
     font-size: 40px;
     color: #393938;
     font-weight: bold;
@@ -685,7 +626,7 @@ figure:hover+span {
 }
 
 .box_main {
-    width: 90%;
+    /* width: 90%; */
     float: right;
     background-color: #ffffff;
     padding: 0px 50px 0px 50px;
@@ -744,12 +685,12 @@ figure:hover+span {
 }
 
 #main_slider a.carousel-control-prev {
-    left: -90px;
+    /* left: -90px; */
     top: 200px;
 }
 
 #main_slider a.carousel-control-next {
-    right: -90px;
+    right: -60px;
     top: 200px;
 }
 
@@ -760,7 +701,7 @@ figure:hover+span {
     opacity: 1;
     font-size: 30px;
     color: #fefefc;
-    background-color: #6cbd15;
+    background-color: #182509;
     border-radius: 100px;
     margin: 0 auto;
     text-align: center;
@@ -812,8 +753,16 @@ figure:hover+span {
 }
 
 .mail_section_1 {
-    width: 84%;
-    float: right;
+    width: 100%;
+    /* float: right; */
+    padding-top: 50px;
+}
+
+.checkboxes {
+    width: 100%;
+    /* float: right; */
+    padding-top: 50px;
+    font-size: 35px;
 }
 
 .mail_text {
@@ -822,17 +771,17 @@ figure:hover+span {
     font-size: 16px;
     color: #4f4e4e;
     background-color: #ffff;
-    padding: 8px 15px;
+    padding: 26px 15px;
     margin-top: 20px;
-    border: 0px;
+    border: 6px;
     box-shadow: 0px 0px 8px 8px #f2f2f1;
     font-family: 'Poppins', sans-serif;
 }
 
 .massage-bt {
     color: #4f4e4e;
-    width: 100%;
-    height: 110px;
+    width: 50%;
+    height: 10px;
     font-size: 18px;
     background-color: #ffff;
     padding: 40px 15px 0px 15px;
@@ -847,15 +796,14 @@ figure:hover+span {
     width: 170px;
     margin: 0 auto;
     /* text-align: right; */
-    margin-top: ;
 }
 
 .send_bt a {
-    width: 100%;
+    width: 99%;
     text-align: center;
-    font-size: 16px;
+    font-size: 1s0px;
     color: #fefefc;
-    background-color: #6cbd15;
+    background-color: #2b4014;
     padding: 12px;
     text-transform: uppercase;
     margin-top: 50px;
@@ -874,7 +822,45 @@ figure:hover+span {
     float: left;
 }
 
+.nav-wrapper {
+    position: relative;
+  }
 
+/* CSS para a navbar vertical */
+.vertical-nav {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    z-index: 1;
+    width: 200px; /* largura da navbar */
+    /* height: 100%; */ /* altura da navbar (100% para ocupar toda a página) */
+    background-color:    #082d12eb; /* cor de fundo */
+    color: #fff; /* cor do texto */
+    /* padding-top: 60px; */ /* espaçamento acima do primeiro item da lista */
+  }
+  
+  .vertical-nav ul {
+    list-style: none; /* remover os marcadores da lista */
+    margin: 0; /* remover margens */
+    padding: 0; /* remover espaçamento interno */
+  }
+  
+  .vertical-nav li {
+    margin: 0; /* remover margens */
+    padding: 0; /* remover espaçamento interno */
+  }
+  
+  .vertical-nav a {
+    display: block; /* tornar o elemento âncora como um bloco (para ocupar todo o espaço da lista) */
+    color: #fff; /* cor do texto */
+    text-decoration: none; /* remover sublinhado do texto */
+    padding: 16px; /* espaçamento interno */
+  }
+  
+  .vertical-nav a:hover {
+    background-color: #fff; /* mudar cor de fundo quando o mouse passa por cima */
+    color: #333; /* mudar cor do texto quando o mouse passa por cima */
+  }
 /* contact section end */
 
 
@@ -946,6 +932,80 @@ figure:hover+span {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Estilo da camada de fundo que cobre a página principal */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  .input-container {
+    display: block;
+    justify-content: space-between;
+
+  }
+
+  /* Estilo do pop-up */
+
+  .modal form {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .modal label {
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .modal .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal input[type="number"] {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .modal button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 45px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+
+.radios{
+    /* width: 109px; */
+    font-size: x-large;
+}
 .location_text {
     width: 100%;
     float: left;

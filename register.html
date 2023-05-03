@@ -27,12 +27,13 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
    </head>
    <body>
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+               <a class="navbar-brand" href="index.html"><img src="images/managefut.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -42,28 +43,13 @@
                         <a class="nav-link" href="index.html">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="trannirs.html">Trannirs</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="games.html">Games</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="classes.html">Classes</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="login.html">Login</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                      <div class="login_btn">
                         <ul>
-                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                         
                         </ul>
                      </div>
                   </form>
@@ -77,21 +63,47 @@
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6">
+                   <!-- ROLES -->
+                   <fieldset>
+                     <h1 class="contact_taital">What is your role in the team?</h1>
+                     <div class="radios">
+                       <input type="radio" id="player" name="role" value="player" onclick="showModal()">
+                       <label for="player">Player</label>
+                       <input type="radio" id="coach" name="role" value="coach" onclick="showModal()">
+                       <label for="coach">Coach</label>
+                     </div>
+                   </fieldset>
+                   
+                   <div class="modal-bg" style="display:none;"></div>
+                     <div class="modal" style="display:none;">
+                     <form onsubmit="generateCode(event); return false;">
+                        <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+                        <label>Insira três números:</label>
+                        <div class="input-container">
+                           <input type="number" name="num1" required>
+                           <input type="number" name="num2" required>
+                           <input type="number" name="num3" required>
+                        </div>
+                      
+                           <button type="submit">Gerar código</button>
+                         
+                     </form>
+                     </div>
+  
+                 <!-- ROLES END -->
+
                   <div class="mail_section_1">
-                     <h1 class="contact_taital">Get In Touch</h1>
+                     <h1 class="contact_taital">Complete the registration</h1>
                      <div class="form">
-                        <input type="text" class="mail_text" placeholder="Name" name="Name">
-                        <input type="text" class="mail_text" placeholder="Email" name="Email">
-                        <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number"> 
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                        <div class="send_bt"><a href="#">Send</a></div>
+                        <input type="text" class="mail_text" placeholder="Name" name="Name" required>
+                        <input type="email" class="mail_text" placeholder="Email" name="Email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+                        <input type="text" class="mail_text" placeholder="Password" name="Password" required> 
+                      
                      </div>
                   </div>
                </div>
-               <div class="col-md-6 padding_right_0">
-                  <div class="contact_img"><img src="images/contact-img.png"></div>
-               </div>
             </div>
+            <div class="send_bt"><a href="coach.html">Sign Up</a></div>
          </div>
       </div>
       <!-- contact section end -->
@@ -100,55 +112,9 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
-                  <div class="footer_logo"><img src="images/footer-logo.png"></div>
-                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                  <div class="footer_logo"><img src="images/managefut.png"></div>
+                  <p class="footer_text">Assignment 2 IHC 2023 LECI Class P2 </p>
                </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h3 class="useful_text">Menu</h3>
-                  <div class="footer_menu">
-                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Link</h1>
-                  <p class="dummy_text">Adipiscing Elit, sed do Eiusmod Tempor incididunt </p>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Contact Us</h1>
-                  <div class="location_text">
-                     <ul>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">No.123 Chalingt Gates</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : demo@gmail.com</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-               </ul>
             </div>
          </div>
       </div>
@@ -166,8 +132,10 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
+      <script src = "js/scripts.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+
    </body>
 </html>
