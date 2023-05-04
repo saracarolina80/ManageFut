@@ -78,14 +78,30 @@
                      <div class="modal" style="display:none;">
                      <form onsubmit="generateCode(event); return false;">
                         <button onclick="closeModal()"><i class="fas fa-times"></i></button>
-                        <label>Insira três números:</label>
+                        <label>Create your team code</label>
                         <div class="input-container">
-                           <input type="number" name="num1" required>
-                           <input type="number" name="num2" required>
-                           <input type="number" name="num3" required>
+                           <input type="number" name="num1" >
+                           <input type="number" name="num2" >
+                           <input type="number" name="num3" >
                         </div>
                       
-                           <button type="submit">Gerar código</button>
+                           <button type="submit">Create code </button>
+                         
+                     </form>
+                     </div>
+
+                     <div class="modal-bgP" style="display:none;"></div>
+                     <div class="modalP" style="display:none;">
+                     <form onsubmit="generateCode(event); return false;">
+                        <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+                        <label>Insert your team code:</label>
+                        <div class="input-container">
+                           <input type="number" name="num1" >
+                           <input type="number" name="num2" >
+                           <input type="number" name="num3" >
+                        </div>
+                      
+                           <button type="submit">Insert code</button>
                          
                      </form>
                      </div>
@@ -96,14 +112,16 @@
                      <h1 class="contact_taital">Complete the registration</h1>
                      <div class="form">
                         <input type="text" class="mail_text" placeholder="Name" name="Name" required>
-                        <input type="email" class="mail_text" placeholder="Email" name="Email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+                        <input type="email" class="mail_text" placeholder="Email" name="Email" required>
                         <input type="text" class="mail_text" placeholder="Password" name="Password" required> 
                       
                      </div>
                   </div>
                </div>
             </div>
-            <div class="send_bt"><a href="coach.html">Sign Up</a></div>
+            <div class="send_bt">
+               <a href="#" onclick="redirectToPage()">Sign Up</a>
+             </div>
          </div>
       </div>
       <!-- contact section end -->
