@@ -66,3 +66,108 @@ function closeModal() {
       window.location.href = "coach.html";
     }
   }
+
+
+  // function adicionarExercicio() {
+  //   // Crie um novo elemento <p> para representar o exercício adicionado
+  //   const novoExercicio = document.createElement("p");
+  //   novoExercicio.textContent = "Exercício adicionado!"; // Aqui você pode definir o texto do exercício ou obter informações de um formulário
+  
+  //   // Selecione a caixa "Lista de exercícios" e adicione o novo exercício a ela
+  //   const listaExercicios = document.getElementById("listaExercicios");
+  //   listaExercicios.appendChild(novoExercicio);
+  // }
+  
+  // function limparLista() {
+  //   const listaExercicios = document.getElementById("listaExercicios");
+  //   listaExercicios.innerHTML = "<h3 style='border-bottom: 1px solid black; padding-bottom: 10px;'>Lista de exercícios</h3>";
+  // }
+
+  function adicionarExercicio() {
+    // Obter valores dos campos de entrada
+    var nomeExercicio = document.getElementById("nome_exercicio").value;
+    var descricaoExercicio = document.getElementById("descricao").value;
+    var duracao = document.getElementById("duracao").value;
+    var numRepeticoes = document.getElementById("num_repeticoes").value;
+  
+    // Obter a tabela e criar uma nova linha
+    var tabela = document.getElementById("tabela_exercicios");
+    console.log(tabela);
+    var novaLinha = tabela.insertRow(-1);
+  
+    // Criar as células para a nova linha
+    var celulaNome = novaLinha.insertCell(0);
+    var celulaDescricao = novaLinha.insertCell(1);
+    var celulaDuracao = novaLinha.insertCell(1);
+    var celulaRepeticoes = novaLinha.insertCell(2);
+  
+    // Inserir os valores dos campos de entrada nas células
+    celulaNome.innerHTML = nomeExercicio;
+    celulaDescricao.innerHTML = descricaoExercicio;
+    celulaDuracao.innerHTML = duracao;
+    celulaRepeticoes.innerHTML = numRepeticoes;
+  }
+  
+  const form = document.querySelector('form');
+  const input = document.querySelector('#mensagem');
+  const listaMensagens = document.querySelector('#mensagens');
+  
+  // form.addEventListener('submit', (event) => {
+  //   event.preventDefault(); // evitar que a página seja recarregada
+  //   const mensagem = input.value;
+  //   input.value = ''; // limpar o campo de entrada
+  //   adicionarMensagem('Você', mensagem); // adicionar a mensagem à lista
+  // });
+
+  function adicionarMensagem(usuario, texto) {
+    const mensagemLi = document.createElement('li');
+    mensagemLi.textContent = `${usuario}: ${texto}`;
+    listaMensagens.appendChild(mensagemLi);
+  }
+  
+  // const popup = document.getElementById("popup");
+  // console.log(popup);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const abrirPopup = document.getElementById("abrirPopup");
+    const popup = document.getElementById("popup");
+    const form = document.querySelector("form");
+  
+    abrirPopup.addEventListener("click", () => {
+      popup.style.display = "block";
+      popup.showModal();
+    });
+  
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // prevent form submission
+  
+      const formData = new FormData(form);
+      console.log(formData.getAll("jogador"));
+  
+      popup.close();
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const abrirPopup = document.getElementById("abrirPopup2");
+    const popup = document.getElementById("popup2");
+    const form = document.querySelector("form");
+  
+    abrirPopup.addEventListener("click", () => {
+      popup.style.display = "block";
+      popup.showModal();
+    });
+  
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // prevent form submission
+  
+      const formData = new FormData(form);
+      console.log(formData.getAll("jogador"));
+  
+      popup.close();
+    });
+  });
+  
+  
+  
+  

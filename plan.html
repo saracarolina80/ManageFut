@@ -27,6 +27,7 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <script src="js/scripts.js"></script>
    </head>
    <body>
     <div class="nav-wrapper">
@@ -71,21 +72,71 @@
     </div>
 
       <p></p>
-      <h1 class="title">Nome da Equipa</h1>
+      <h1 class="title">Plano de treinos</h1>
       
-      <p class="calendario">Calendário</p>
-      <img src="images/calendario.png" alt="Calendário" class="img-calendario">
-
-      <p class="calendario" style="padding-top: 20px;">Estatisticas da equipa</p>
-      <img src="images/stats.jpg" alt="Stats" class="img-calendario" style="width: 60%; margin-bottom: 40px;">
-
-   
-      <p class="calendario" style="padding-top: 20px;">Resultados da equipa</p>
-      <img src="images/results.jpg" alt="Resultados" class="img-calendario" style="width: 60%; margin-bottom: 40px;">
-
-                 
+      <div class="container">
+         <div class="row">
+           <div class="col-md-6 col-lg-6 order-md-1 order-lg-0">
+      <p><b>Escolha os exercícios para o treino!</b></p> <!-- agora fica em negrito -->
+      <div style="width: 420px;">
+        <label for="nome_exercicio" style="display: block; float: left;">Nome do exercício:</label>
+        <input type="text" id="nome_exercicio" name="nome_exercicio" style="width: 400px; display: block; float: left;">
         
+        <label for="descricao" style="display: block; float: left;">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" style="width: 400px; height: 200px; display: block; float: left;">
+        
+        <br></br><br></br>
+        <p>
+            <span style="display: inline-block; margin-top: 15px;">Duração:</span>
+            <input type="text" id="duracao" name="caixa-texto" style="display: inline-block; width: 40px;">
+            <span style="display: inline-block;">minutos</span>
+                         
+        </p>
+        <label for="num_repeticoes" style="display: block; float: left;">Repetições:</label>
+        <input type="text" id="num_repeticoes" name="num_repeticoes" style="width: 30px; display: block; float: left;">
+        
+      </div>
+ 
+      <br></br>
+      <div style="flex: 1; text-align: center; margin-bottom: 20px;">
+        <div style="display: flex; flex-direction:row; align-items: center;">
+          <button id="limpar" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;" onclick="limparLista()">Limpar</button>
+          <button id="adicionar-exercicio" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;" onclick="adicionarExercicio()">Adicionar exercicio</button>
+        </div>
+    </div>
+   </div>
+
+    <!-- <div id="lista-de-exercicios" style="height: 400px; margin-left: auto; margin-right: auto; width: 40%; border: 1px solid black; text-align: center;">
+        <h3 style="border-bottom: 1px solid black; padding-bottom: 10px;">Lista de exercícios</h3>
+    </div> -->
+
+
+    <div class="col-md-6 col-lg-6 order-md-0 order-lg-1">
+      <p><b>Lista de exercicios</b></p> <!-- agora fica em negrito -->
+
+      <table class="table" id="tabela_exercicios">
+        <thead>
+          <tr>
+            <th scope="col">Nome do exercício</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Duração</th>
+            <th scope="col">Repetições</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+         </div>
+      </div>
+      
+      <a href="train.html" target="_blank">
+         <button style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0; margin-left: 180px;">Guardar</button>
+       </a>
     
+      
+
+
       <!-- footer section start -->
       <!-- <div class="footer_section layout_padding">
          <div class="container">
@@ -115,4 +166,4 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
-</html>
+</html> 

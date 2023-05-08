@@ -24,8 +24,9 @@
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
       <!-- font css -->
+      <script src="js/scripts.js"></script>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
    </head>
    <body>
@@ -71,18 +72,54 @@
     </div>
 
       <p></p>
-      <h1 class="title">Nome da Equipa</h1>
+      <h1 class="title">Plano de Treinos</h1>
       
-      <p class="calendario">Calendário</p>
-      <img src="images/calendario.png" alt="Calendário" class="img-calendario">
-
-      <p class="calendario" style="padding-top: 20px;">Estatisticas da equipa</p>
-      <img src="images/stats.jpg" alt="Stats" class="img-calendario" style="width: 60%; margin-bottom: 40px;">
-
-   
-      <p class="calendario" style="padding-top: 20px;">Resultados da equipa</p>
-      <img src="images/results.jpg" alt="Resultados" class="img-calendario" style="width: 60%; margin-bottom: 40px;">
-
+      <div style="height: 400px; margin-left: 255px; width: 80%; border: 1px solid black; display: flex;">
+         <div style="flex: 1; text-align: center;">
+           <p style="margin-top: 10px; margin-top: 30px;">Segunda-feira</p>
+           <p style="margin-top: 10px; margin-bottom: 150px;">18h00-20h00</p>
+           <div style="display: flex; flex-direction: column; align-items: center;">
+             <a href="plan.html" target="_blank">
+               <button style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Escolher exercicios</button>
+             </a>
+             <button id="abrirPopup" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Ausências</button>
+             <dialog id="popup" style="display: none;">
+               <form>
+                 <ul>
+                   <li><label><input type="checkbox" name="jogador" value="1"> Jogador 1</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="2"> Jogador 2</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="3"> Jogador 3</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="4"> Jogador 4</label></li>
+                 </ul>
+                 <button type="submit">Salvar</button>
+               </form>
+             </dialog>
+           </div>
+         </div>
+         <div style="width: 1px; background-color: black;"></div>
+         <div style="flex: 1; text-align: center;">
+           <p style="margin-top: 10px; margin-top: 30px;">Sexta-feira</p>
+           <p style="margin-top: 10px; margin-bottom: 150px;">18h00-20h00</p>
+           <div style="display: flex; flex-direction: column; align-items: center;">
+            <a href="plan.html" target="_blank">
+               <button style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Escolher exercicios</button>
+             </a>
+             <button id="abrirPopup2" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Ausências</button>
+             <dialog id="popup2" style="display: none;">
+               <form>
+                 <ul>
+                   <li><label><input type="checkbox" name="jogador" value="1"> Jogador 1</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="2"> Jogador 2</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="3"> Jogador 3</label></li>
+                   <li><label><input type="checkbox" name="jogador" value="4"> Jogador 4</label></li>
+                 </ul>
+                 <button type="submit">Salvar</button>
+               </form>
+             </dialog>
+           </div>
+         </div>
+       </div>
+      
                  
         
     
