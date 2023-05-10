@@ -168,6 +168,27 @@ function closeModal() {
     });
   });
   
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const abrirPopup = document.getElementById("abrirPopup3");
+    const popup = document.getElementById("popup3");
+    const form = document.querySelector("form");
+  
+    abrirPopup.addEventListener("click", () => {
+      popup.style.display = "block";
+      popup.showModal();
+    });
+  
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // prevent form submission
+  
+      const formData = new FormData(form);
+      console.log(formData.getAll("jogador"));
+  
+      popup.close();
+    });
+  });
+  
   
   
   

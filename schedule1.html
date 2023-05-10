@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Player Main Page</title>
+      <title>Schedule Page</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -55,79 +55,43 @@
       
       <!-- navbar vertical -->
       <nav class="vertical-nav">
-        <ul>
-        <li><a href="players1.html">Players</a></li>
-        <li><a href="schedule1.html">Schedule</a></li>
-        <li><a href="photos1.html">Videos/Photos</a></li>
-        <li><a href="chat1.html">CHAT</a></li>
-        </ul>
+         <ul>
+            <li><a href="players1.html">Players</a></li>
+            <li><a href="schedule1.html">Schedule</a></li>
+            <li><a href="photos1.html">Videos/Photos</a></li>
+            <li><a href="chat1.html">CHAT</a></li>
+           </ul>
         </nav>
     </div>
 
       <p></p>
-      <h1 class="title">TEAM ALL STARS</h1>
+      <h1 class="title">Calendário</h1>
       
+      <img src="images/calendario.png" alt="Calendário" class="img-calendario" style="margin-left: 210px;">
       
-       <p></p>
-       <h1 class="title">Jogador</h1>
-          
-       <div style="display: inline-block;">
-         <table style="margin-left: 300px;">
-           <tr>
-             <td>Nome:</td>
-             <td>João</td>
-           </tr>
-           <tr>
-             <td>Data de Nascimento:</td>
-             <td>01/05/2007</td>
-           </tr>
-           <tr>
-             <td>Nacionalidade:</td>
-             <td>Português</td>
-           </tr>
-           <tr>
-             <td>Posição:</td>
-             <td>Atacante</td>
-           </tr>
-           <tr>
-             <td>Pé Preferido:</td>
-             <td>Direito</td>
-           </tr>
-           <tr>
-             <td>Data de Início de Carreira:</td>
-             <td>03/04/2012</td>
-           </tr>
-         </table>
-       </div>
-       
-       <img src="caminho_para_a_imagem" alt="Foto do Jogador" style="float: right; margin-right: 300px;">
-       
-       <table style="margin-left: 300px;">
-         <tr>
-           <th>Estatística</th>
-           <th>Valor</th>
-         </tr>
-         <tr>
-           <td>Golos</td>
-           <td>12</td>
-         </tr>
-         <tr>
-           <td>Assistências</td>
-           <td>4</td>
-         </tr>
-         <tr>
-           <td>CA</td>
-           <td>3</td>
-         </tr>
-         <tr>
-           <td>CV</td>
-           <td>0</td>
-         </tr>
-       </table>
- 
-     
-        
-    
+                 
+      <button id="abrirPopup3" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Marcar Ausências</button>
+      <dialog id="popup3" style="display: none;">
+        <form class="form">
+          <ul>
+            <li><label><input name="jogador" value="">Data do treino </label></li>
+            <li><label><input name="jogador" value=""> Motivo</label></li>
+          </ul>
+          <button onclick="closeModal()">Salvar</button>
+        </form>
+      </dialog>
+
+      <!-- footer section start -->
+      <!-- <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="footer_logo"><img src="images/managefut.png"></div>
+                  <p class="footer_text">Assignment 2 IHC 2023 LECI Class P2 </p>
+               </div>
+            </div>
+         </div>
+      </div> -->
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -142,6 +106,7 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
+      <script src="js/scripts.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
