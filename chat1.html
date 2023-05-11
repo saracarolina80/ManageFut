@@ -27,6 +27,7 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <script src="js/chat.js"></script>
    </head>
    <body>
     <div class="nav-wrapper">
@@ -67,13 +68,22 @@
       <p></p>
       <h1 class="title">Chat</h1>
       
+      <div class="box">
+         <ul id="mensagens">
+            <li>Amanhã há treino!</li>
+            <li>Bom jogo, boa vitória.</li>
+         </ul>
+         <form id="chat" onsubmit="enviarMensagem(); return false;">
+      </div>
+       
+      
       <div class="chat-container">
         <ul id="mensagens"></ul>
-        <form>
-          <input type="text" id="mensagem" placeholder="Digite sua mensagem aqui" style="width: 40%;">
-          <button type="submit">Enviar</button>
-        </form>
-      </div>      
+        <form id="chat">
+         <input type="text" id="mensagem" placeholder="Digite sua mensagem aqui" style="width: 40%;">
+         <button type="submit">Enviar</button>
+      </form>      
+      </div>         
       
                  
         

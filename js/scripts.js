@@ -78,10 +78,13 @@ function closeModal() {
   //   listaExercicios.appendChild(novoExercicio);
   // }
   
-  // function limparLista() {
-  //   const listaExercicios = document.getElementById("listaExercicios");
-  //   listaExercicios.innerHTML = "<h3 style='border-bottom: 1px solid black; padding-bottom: 10px;'>Lista de exercícios</h3>";
-  // }
+  function limparLista() {
+    const listaExercicios = document.getElementById("tabela_exercicios");
+    while (listaExercicios.rows.length > 1) {
+      listaExercicios.deleteRow(1);
+    }
+  }
+  
 
   function adicionarExercicio() {
     // Obter valores dos campos de entrada
@@ -149,13 +152,13 @@ function closeModal() {
   });
   
   document.addEventListener("DOMContentLoaded", () => {
-    const abrirPopup = document.getElementById("abrirPopup2");
-    const popup = document.getElementById("popup2");
+    const abrirPopup2 = document.getElementById("abrirPopup2");
+    const popup2 = document.getElementById("popup2");
     const form = document.querySelector("form");
   
-    abrirPopup.addEventListener("click", () => {
-      popup.style.display = "block";
-      popup.showModal();
+    abrirPopup2.addEventListener("click", () => {
+      popup2.style.display = "block";
+      popup2.showModal();
     });
   
     form.addEventListener("submit", (event) => {
@@ -164,7 +167,7 @@ function closeModal() {
       const formData = new FormData(form);
       console.log(formData.getAll("jogador"));
   
-      popup.close();
+      popup2.close();
     });
   });
   
@@ -189,6 +192,44 @@ function closeModal() {
     });
   });
   
+  var role; // declaração da variável
+      
+function setRole(selectedRole) { // definição da função
+  role = selectedRole;
+  console.log(role);
+}
+
+document.getElementById("login-button").addEventListener("click", function() {
+  setRole();
+});
+
+document.getElementById("login-button").onclick = function() {
+  if (role === "player") {
+    window.location.href = "player.html";
+  } else if (role === "coach") {
+    window.location.href = "coach.html";
+  } else {
+    alert("Please select a role.");
+  }
+};
+
+function loginfunc() {
+  var role = document.querySelector('input[name="role"]:checked').value;
+  var loginButton = document.querySelector('#login-button');
   
-  
-  
+  // Change the link of the login button based on the role choice
+  if (role === 'player') {
+      loginButton.href = 'player.html';
+  } else if (role === 'coach') {
+      loginButton.href = 'coach.html';
+  }
+}
+
+var loginButton = document.querySelector('#login-button');
+loginButton.addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent the default behavior of the link
+  var href = loginButton.href;
+  if (href !== '#') {
+      window.location.href = href; // Redirect to the new link
+  }
+});
