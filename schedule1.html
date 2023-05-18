@@ -8,6 +8,7 @@
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- site metas -->
       <title>Schedule Page</title>
       <meta name="keywords" content="">
@@ -27,13 +28,16 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   
+       <!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
    </head>
    <body>
     <div class="nav-wrapper">
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand" href="index.html"><img src="images/managefut.png"></a>
+               <a class="navbar-brand"><img src="images/managefut.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -65,21 +69,28 @@
     </div>
 
       <p></p>
-      <h1 class="title">Calendário</h1>
       
-      <img src="images/calendario.png" alt="Calendário" class="img-calendario" style="margin-left: 210px;">
-      
-                 
-      <button id="abrirPopup3" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;">Marcar Ausências</button>
-      <dialog id="popup3" style="display: none; width: 300px; height: 300px;">
-        <form class="form">
-          <ul>
-            <li><label><input style="width: 60px;" name="jogador" value="">Data do treino </label></li>
-            <li><label><input style="margin-top: 10px; width: 180px; height: 150px;" name="jogador" value="">Motivo</label></li>
-          </ul>
-          <button style="width: 50px; margin-top: 20px;" onclick="closeModal()">Guardar</button>
-        </form>
-      </dialog>
+      <div class="wrapper"  style="margin-left: 350px; margin-top: 100px;">
+         <header>
+           <p class="current-date"></p>
+           <div class="icons">
+             <span id="prev" class="material-symbols-rounded">chevron_left</span>
+             <span id="next" class="material-symbols-rounded">chevron_right</span>
+           </div>
+         </header>
+         <div class="calendar">
+           <ul class="weeks">
+             <li>Sun</li>
+             <li>Mon</li>
+             <li>Tue</li>
+             <li>Wed</li>
+             <li>Thu</li>
+             <li>Fri</li>
+             <li>Sat</li>
+           </ul>
+           <ul class="days"></ul>
+         </div>
+       </div>
 
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -95,6 +106,7 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
       <script src="js/scripts.js"></script>
+      <script src="js/calendario.js" defer></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
