@@ -27,6 +27,7 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <script src="js/scripts.js"></script>
    </head>
    <body>
     <div class="nav-wrapper">
@@ -61,7 +62,7 @@
             <li><a href="train.html">Practices</a></li>
             <li><a href="next_match.html">Next match</a></li>
             <li><a href="photos.html">Videos/Photos</a></li>
-            <li><a href="chat.html">CHAT</a></li>
+            <li><a href="chat.html">Chat</a></li>
            </ul>
         </nav>
     </div>
@@ -75,12 +76,17 @@
           <th>Equipa da casa</th>
           <th>Visitante</th>
           <th>Local</th>
+          <th>Convocatória</th>
         </tr>
         <tr>
           <td>14/05/2023</td>
           <td>Team All Stars</td>
           <td>Leiria</td>
           <td>Estádio Dr. Magalhães Pessoa</td>
+          <td>
+            <button style="width: 130px;" onclick="exibirLista()">Mostrar Jogadores</button>
+            <ul id="listaConvocatoria" style="display: none;"></ul> 
+          </td>   
         </tr>
       </table>
 

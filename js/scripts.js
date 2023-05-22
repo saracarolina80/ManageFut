@@ -79,12 +79,20 @@ function closeModal() {
   // }
   
   function limparLista() {
-    const listaExercicios = document.getElementById("tabela_exercicios");
-    while (listaExercicios.rows.length > 1) {
-      listaExercicios.deleteRow(1);
-    }
+    const tabelaExercicios = document.getElementById("tabela_exercicios");
+  const totalLinhas = tabelaExercicios.rows.length;
+
+  if (totalLinhas > 1) { // Verifica se há mais de uma linha na tabela
+    tabelaExercicios.deleteRow(totalLinhas - 1); // Remove a última linha (índice totalLinhas - 1)
+  }
   }
   
+  function limparCampos() {
+    document.getElementById("nome_exercicio").value = "";
+    document.getElementById("descricao").value = "";
+    document.getElementById("duracao").value = "";
+    document.getElementById("num_repeticoes").value = "";
+  }
 
   function adicionarExercicio() {
     // Obter valores dos campos de entrada
@@ -109,6 +117,8 @@ function closeModal() {
     celulaDescricao.innerHTML = descricaoExercicio;
     celulaDuracao.innerHTML = duracao;
     celulaRepeticoes.innerHTML = numRepeticoes;
+
+    limparCampos();
   }
   
   const form = document.querySelector('form');
@@ -233,5 +243,56 @@ loginButton.addEventListener('click', function(e) {
       window.location.href = href; // Redirect to the new link
   }
 });
+
+
+// guardar.addEventListener("click", function () {
+//   save_popup.classList.add("show");
+// });
+// close_popup.addEventListener("click", function () {
+//   save_popup.classList.remove("show");
+// });
+// window.addEventListener("click", function (event) {
+//   if (event.target == save_popup) {
+//       save_popup.classList.remove("show");
+//   }
+// });
+
+function exibirLista() {
+  const listaConvocatoria = document.getElementById("listaConvocatoria");
+  const botao = document.getElementById("botaoLista");
+
+  // Verifica se a lista está oculta
+  if (listaConvocatoria.style.display === "none") {
+    // Limpa a lista antes de exibir
+    listaConvocatoria.innerHTML = "";
+
+    // Opções da lista
+    const opcoes = ["João", "Francisco", "António", "Pedro", "Afonso", "Marco", "Filipe", "Diogo", "Martim"];
+
+    // Cria uma checkbox para cada opção e adiciona à lista
+    opcoes.forEach((opcao) => {
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = opcao;
+
+      const label = document.createElement("label");
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(opcao));
+
+      const listItem = document.createElement("li");
+      listItem.appendChild(label);
+
+      listaConvocatoria.appendChild(listItem);
+    });
+
+    // Exibe a lista
+    listaConvocatoria.style.display = "block";
+    botao.textContent = "Esconder Lista"; // Atualiza o texto do botão
+  } else {
+    // Oculta a lista
+    listaConvocatoria.style.display = "none";
+    botao.textContent = "Mostrar Lista"; // Atualiza o texto do botão
+  }
+}
 
 

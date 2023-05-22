@@ -62,7 +62,7 @@
             <li><a href="train.html">Practices</a></li>
             <li><a href="next_match.html">Next match</a></li>
             <li><a href="photos.html">Videos/Photos</a></li>
-            <li><a href="chat.html">CHAT</a></li>
+            <li><a href="chat.html">Chat</a></li>
            </ul>
         </nav>
     </div>
@@ -79,8 +79,8 @@
         <input type="text" id="nome_exercicio" name="nome_exercicio" style="width: 400px; display: block; float: left;">
         
         <label for="descricao" style="display: block; float: left;">Descrição:</label>
-        <input type="text" id="descricao" name="descricao" style="width: 400px; height: 200px; display: block; float: left;">
-        
+        <textarea id="descricao" name="descricao" style="width: 400px; height: 200px; float: left;"></textarea>
+                
         <br></br><br></br>
         <p>
             <span style="display: inline-block; margin-top: 15px;">Duração:</span>
@@ -126,10 +126,28 @@
          </div>
       </div>
       
-      <a href="train.html" target="_blank">
+      <!-- <a href="train.html">
          <button style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0; margin-left: 180px;">Guardar</button>
-       </a>
-    
+       </a> -->
+
+      <button id="guardar" style="width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0; margin-left: 180px;">Guardar</button>
+
+       
+       <!-- <button id="myButton">
+         Click me
+     </button> -->
+   <div id="save_popup" class="popup">
+       <div class="popup-content">
+           <h1>
+                 Guardado!
+             </h1>
+             <a href="train.html">
+               <button id="close_popup" href="train.html">
+                  Voltar
+              </button>                
+             </a>
+       </div>
+   </div>
       
 
 
@@ -161,5 +179,20 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      
+      <script>
+         guardar.addEventListener("click", function () {
+         save_popup.classList.add("show");
+         });
+         close_popup.addEventListener("click", function () {
+         save_popup.classList.remove("show");
+         });
+         window.addEventListener("click", function (event) {
+         if (event.target == save_popup) {
+               save_popup.classList.remove("show");
+         }
+         });
+      </script>
+
    </body>
 </html> 
