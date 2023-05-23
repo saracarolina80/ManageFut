@@ -296,3 +296,17 @@ function exibirLista() {
 }
 
 
+// LOGIN 
+function login() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Realizar a verificação do email e redirecionar
+  if (username === "sergio@gmail.com") {
+    window.location.href = "coach.html";
+  } else if (username === "tiago@gmail.com") {
+    window.location.href = "player.html";
+  } else {
+    alert("Invalid credentials. Try Again!");
+  }
+}
