@@ -1451,3 +1451,16 @@ h1 {
     height: auto;
   }
   
+.editar{
+    width: 100px;
+}
+
+.days .training-day {
+    background-color: yellow;
+    color: black;
+}
+
+  .practice-list {
+    margin-top: 20px;
+    list-style-type: none;
+  }

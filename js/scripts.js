@@ -310,3 +310,49 @@ function login() {
     alert("Invalid credentials. Try Again!");
   }
 }
+
+
+
+// function adicionarJogador() {
+//   // Obtém as informações do novo jogador
+//   var nomeJogador = prompt("Digite o nome do jogador:");
+//   var idadeJogador = prompt("Digite a idade do jogador:");
+//   var posicaoJogador = prompt("Digite a posição do jogador:");
+//   var numeroJogador = prompt("Digite o número do jogador:");
+//   var golsJogador = prompt("Digite a quantidade de gols do jogador:");
+//   var assistenciasJogador = prompt("Digite a quantidade de assistências do jogador:");
+//   var caJogador = prompt("Digite a quantidade de cartões amarelos do jogador:");
+//   var cvJogador = prompt("Digite a quantidade de cartões vermelhos do jogador:");
+
+//   // Manipula a tabela para adicionar o novo jogador
+//   var tabela = document.getElementById("tabela_jogadores");
+//   var novaLinha = tabela.insertRow();
+
+//   // Insere as células com as informações do jogador
+//   var celulaNome = novaLinha.insertCell();
+//   celulaNome.innerHTML = nomeJogador;
+
+//   var celulaIdade = novaLinha.insertCell();
+//   celulaIdade.innerHTML = idadeJogador;
+
+//   var celulaPosicao = novaLinha.insertCell();
+//   celulaPosicao.innerHTML = posicaoJogador;
+
+//   var celulaNumero = novaLinha.insertCell();
+//   celulaNumero.innerHTML = numeroJogador;
+
+//   var celulaGols = novaLinha.insertCell();
+//   celulaGols.innerHTML = golsJogador;
+
+//   var celulaAssistencias = novaLinha.insertCell();
+//   celulaAssistencias.innerHTML = assistenciasJogador;
+
+//   var celulaCA = novaLinha.insertCell();
+//   celulaCA.innerHTML = caJogador;
+
+//   var celulaCV = novaLinha.insertCell();
+//   celulaCV.innerHTML = cvJogador;
+// }
+
+// var botaoAdicionar = document.getElementById("addPlayer");
+// botaoAdicionar.addEventListener("click", adicionarJogador);
