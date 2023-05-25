@@ -87,11 +87,13 @@
                      <p>Create a code that will be attached to your team. Players need this code to get access to the
                         team.</p>
                      <div class="input-container">
-                        <input name="num1">
-                        <input name="num2">
-                        <input name="num3">
+                        <input name="num1" pattern="[0-9]" required>
+                        <input name="num2" pattern="[0-9]" required>
+                        <input name="num3" pattern="[0-9]" required>
                      </div>
-
+                     <p>Nome da equipa:
+                        <input name="nome_equipa" style="width: 200px;">
+                     </p>
                      <button type="submit">Create code </button>
 
                   </form>

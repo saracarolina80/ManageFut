@@ -42,7 +42,7 @@
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"><img src="images/managefut.png"></a>
+               <a class="navbar-brand" href="player.html"><img src="images/managefut.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -76,41 +76,77 @@
 
    <p></p>
 
-   <div class="wrapper" style="margin-left: 650px; margin-top: 100px;">
-      <header>
-         <p class="current-date"></p>
-         <div class="icons">
-            <span id="prev" class="material-symbols-rounded">chevron_left</span>
-            <span id="next" class="material-symbols-rounded">chevron_right</span>
-         </div>
-      </header>
-      <div class="calendar">
-         <ul class="weeks">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-         </ul>
-         <ul class="days"></ul>
+   <div class="calendar" style="margin-left: 25%; margin-top: 10%; max-width: 1000px;">
+      <div class="month">
+        <span class="prev">◄</span>
+        <span class="current-date" style="font-size: medium;">June</span>
+        <span class="next">►</span>
       </div>
-   </div>
+      <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li class="special" style="background-color: yellow;">12</li>
+        <li>13</li>
+        <li>14</li>
+        <li class="special" style="background-color: yellow;">15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+      </ul>
+    </div>
+  
+    <table style="margin: 20px auto; margin-left: 20%;">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12/06</td>
+          <td>Practice</td>
+        </tr>
+        <tr>
+          <td>15/06</td>
+          <td>Practice</td>
+        </tr>
+      </tbody>
+    </table>
 
-   <button id="abrirPopup3" style="margin-left: 20px; width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0;"
+   <button id="abrirPopup3" style="margin-left: 20px; width: 200px; font-size: 16px; padding: 10px 20px; margin: 5px 0; margin-bottom: 40px;"
       onclick="openModal()">Missings</button>
    <dialog id="popup3" style="display: none; width: 300px; height: 300px;">
       <form class="form">
          <ul>
-            <label for="dates" style="margin-top: 30px;">Dates</label>
+            <label for="dates" style="margin-top: 30px; font-size: 15px;">Dates</label>
             <select name="dates" id="dates" style="margin-top: 50px;">
                <option value="12/06">12/06</option>
                <option value="15/06">15/06</option>
             </select>
 
-            <li><label><input style=" margin-top: 70px; width: 180px; height: 50px;" name="jogador"
-                     value="">Motivo</label></li>
+            <li><label style="font-size: 15px;"><input style=" margin-top: 70px; width: 180px; height: 50px;" name="jogador" value="">Motivo</label></li>
          </ul>
          <button style="width: 70px; margin-top: 50px;" onclick="closeModal()">Save</button>
          <button id="closeButton"
@@ -135,7 +171,7 @@
    <script src="js/jquery-3.0.0.min.js"></script>
    <script src="js/plugin.js"></script>
    <script src="js/scripts.js"></script>
-   <script src="js/calendario.js" defer></script>
+   <!-- <script src="js/calendario.js" defer></script> -->
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>

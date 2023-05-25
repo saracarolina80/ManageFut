@@ -40,10 +40,10 @@ function generateCode(event) {
   var num3 = event.target.num3.value;
 
   // gera o código usando os números
-  var code =  num1 + " " + num2 + " " + num3;
+  var code = num1 + " " + num2 + " " + num3;
 
   // exibe o código em um alerta
- // alert("Seu código é: " + code);
+  // alert("Seu código é: " + code);
 
   // esconde o pop-up e o fundo modal
   hideModal();
@@ -52,168 +52,168 @@ function generateCode(event) {
 function closeModal() {
   // Armazena a URL atual em uma variável
   var currentUrl = window.location.href;
-  
+
   // Redireciona de volta para a página atual
   window.location.href = currentUrl;
 }
 
- function redirectToPage() {
-    var selectedRole = document.querySelector('input[name="role"]:checked').value;
+function redirectToPage() {
+  var selectedRole = document.querySelector('input[name="role"]:checked').value;
 
-    if (selectedRole === "player") {
-      window.location.href = "player.html";
-    } else if (selectedRole === "coach") {
-      window.location.href = "coach.html";
-    }
+  if (selectedRole === "player") {
+    window.location.href = "player.html";
+  } else if (selectedRole === "coach") {
+    window.location.href = "coach.html";
   }
+}
 
 
-  // function adicionarExercicio() {
-  //   // Crie um novo elemento <p> para representar o exercício adicionado
-  //   const novoExercicio = document.createElement("p");
-  //   novoExercicio.textContent = "Exercício adicionado!"; // Aqui você pode definir o texto do exercício ou obter informações de um formulário
-  
-  //   // Selecione a caixa "Lista de exercícios" e adicione o novo exercício a ela
-  //   const listaExercicios = document.getElementById("listaExercicios");
-  //   listaExercicios.appendChild(novoExercicio);
-  // }
-  
-  function limparLista() {
-    const tabelaExercicios = document.getElementById("tabela_exercicios");
+// function adicionarExercicio() {
+//   // Crie um novo elemento <p> para representar o exercício adicionado
+//   const novoExercicio = document.createElement("p");
+//   novoExercicio.textContent = "Exercício adicionado!"; // Aqui você pode definir o texto do exercício ou obter informações de um formulário
+
+//   // Selecione a caixa "Lista de exercícios" e adicione o novo exercício a ela
+//   const listaExercicios = document.getElementById("listaExercicios");
+//   listaExercicios.appendChild(novoExercicio);
+// }
+
+function limparLista() {
+  const tabelaExercicios = document.getElementById("tabela_exercicios");
   const totalLinhas = tabelaExercicios.rows.length;
 
   if (totalLinhas > 1) { // Verifica se há mais de uma linha na tabela
     tabelaExercicios.deleteRow(totalLinhas - 1); // Remove a última linha (índice totalLinhas - 1)
   }
-  }
-  
-  function limparCampos() {
-    document.getElementById("nome_exercicio").value = "";
-    document.getElementById("descricao").value = "";
-    document.getElementById("duracao").value = "";
-    document.getElementById("num_repeticoes").value = "";
-  }
+}
 
-  function adicionarExercicio() {
-    // Obter valores dos campos de entrada
-    var nomeExercicio = document.getElementById("nome_exercicio").value;
-    var descricaoExercicio = document.getElementById("descricao").value;
-    var duracao = document.getElementById("duracao").value;
-    var numRepeticoes = document.getElementById("num_repeticoes").value;
-  
-    // Obter a tabela e criar uma nova linha
-    var tabela = document.getElementById("tabela_exercicios");
-    console.log(tabela);
-    var novaLinha = tabela.insertRow(-1);
-  
-    // Criar as células para a nova linha
-    var celulaNome = novaLinha.insertCell(0);
-    var celulaDescricao = novaLinha.insertCell(1);
-    var celulaDuracao = novaLinha.insertCell(1);
-    var celulaRepeticoes = novaLinha.insertCell(2);
-  
-    // Inserir os valores dos campos de entrada nas células
-    celulaNome.innerHTML = nomeExercicio;
-    celulaDescricao.innerHTML = descricaoExercicio;
-    celulaDuracao.innerHTML = duracao;
-    celulaRepeticoes.innerHTML = numRepeticoes;
+function limparCampos() {
+  document.getElementById("nome_exercicio").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("duracao").value = "";
+  document.getElementById("num_repeticoes").value = "";
+}
 
-    limparCampos();
-  }
-  
-  const form = document.querySelector('form');
-  const input = document.querySelector('#mensagem');
-  const listaMensagens = document.querySelector('#mensagens');
-  
-  // form.addEventListener('submit', (event) => {
-  //   event.preventDefault(); // evitar que a página seja recarregada
-  //   const mensagem = input.value;
-  //   input.value = ''; // limpar o campo de entrada
-  //   adicionarMensagem('Você', mensagem); // adicionar a mensagem à lista
-  // });
+function adicionarExercicio() {
+  // Obter valores dos campos de entrada
+  var nomeExercicio = document.getElementById("nome_exercicio").value;
+  var descricaoExercicio = document.getElementById("descricao").value;
+  var duracao = document.getElementById("duracao").value;
+  var numRepeticoes = document.getElementById("num_repeticoes").value;
 
-  function adicionarMensagem(usuario, texto) {
-    const mensagemLi = document.createElement('li');
-    mensagemLi.textContent = `${usuario}: ${texto}`;
-    listaMensagens.appendChild(mensagemLi);
-  }
-  
-  // const popup = document.getElementById("popup");
-  // console.log(popup);
+  // Obter a tabela e criar uma nova linha
+  var tabela = document.getElementById("tabela_exercicios");
+  console.log(tabela);
+  var novaLinha = tabela.insertRow(-1);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const abrirPopup = document.getElementById("abrirPopup");
-    const popup = document.getElementById("popup");
-    const form = document.querySelector("form");
-  
-    abrirPopup.addEventListener("click", () => {
-      popup.style.display = "block";
-      popup.showModal();
-    });
-  
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // prevent form submission
-  
-      const formData = new FormData(form);
-      console.log(formData.getAll("jogador"));
-  
-      popup.close();
-    });
+  // Criar as células para a nova linha
+  var celulaNome = novaLinha.insertCell(0);
+  var celulaDescricao = novaLinha.insertCell(1);
+  var celulaDuracao = novaLinha.insertCell(1);
+  var celulaRepeticoes = novaLinha.insertCell(2);
+
+  // Inserir os valores dos campos de entrada nas células
+  celulaNome.innerHTML = nomeExercicio;
+  celulaDescricao.innerHTML = descricaoExercicio;
+  celulaDuracao.innerHTML = duracao;
+  celulaRepeticoes.innerHTML = numRepeticoes;
+
+  limparCampos();
+}
+
+const form = document.querySelector('form');
+const input = document.querySelector('#mensagem');
+const listaMensagens = document.querySelector('#mensagens');
+
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault(); // evitar que a página seja recarregada
+//   const mensagem = input.value;
+//   input.value = ''; // limpar o campo de entrada
+//   adicionarMensagem('Você', mensagem); // adicionar a mensagem à lista
+// });
+
+function adicionarMensagem(usuario, texto) {
+  const mensagemLi = document.createElement('li');
+  mensagemLi.textContent = `${usuario}: ${texto}`;
+  listaMensagens.appendChild(mensagemLi);
+}
+
+// const popup = document.getElementById("popup");
+// console.log(popup);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirPopup = document.getElementById("abrirPopup");
+  const popup = document.getElementById("popup");
+  const form = document.querySelector("form");
+
+  abrirPopup.addEventListener("click", () => {
+    popup.style.display = "block";
+    popup.showModal();
   });
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const abrirPopup2 = document.getElementById("abrirPopup2");
-    const popup2 = document.getElementById("popup2");
-    const form = document.querySelector("form");
-  
-    abrirPopup2.addEventListener("click", () => {
-      popup2.style.display = "block";
-      popup2.showModal();
-    });
-  
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // prevent form submission
-  
-      const formData = new FormData(form);
-      console.log(formData.getAll("jogador"));
-  
-      popup2.close();
-    });
-  });
-  
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const abrirPopup = document.getElementById("abrirPopup3");
-    const popup = document.getElementById("popup3");
-    const form = document.querySelector("form");
-  
-    abrirPopup.addEventListener("click", () => {
-      popup.style.display = "block";
-      popup.showModal();
-    });
-  
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // prevent form submission
-  
-      const formData = new FormData(form);
-      console.log(formData.getAll("jogador"));
-  
-      popup.close();
-    });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent form submission
+
+    const formData = new FormData(form);
+    console.log(formData.getAll("jogador"));
+
+    popup.close();
   });
-  
-  var role; // declaração da variável
-      
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirPopup2 = document.getElementById("abrirPopup2");
+  const popup2 = document.getElementById("popup2");
+  const form = document.querySelector("form");
+
+  abrirPopup2.addEventListener("click", () => {
+    popup2.style.display = "block";
+    popup2.showModal();
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent form submission
+
+    const formData = new FormData(form);
+    console.log(formData.getAll("jogador"));
+
+    popup2.close();
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirPopup = document.getElementById("abrirPopup3");
+  const popup = document.getElementById("popup3");
+  const form = document.querySelector("form");
+
+  abrirPopup.addEventListener("click", () => {
+    popup.style.display = "block";
+    popup.showModal();
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent form submission
+
+    const formData = new FormData(form);
+    console.log(formData.getAll("jogador"));
+
+    popup.close();
+  });
+});
+
+var role; // declaração da variável
+
 function setRole(selectedRole) { // definição da função
   role = selectedRole;
   console.log(role);
 }
 
-document.getElementById("login-button").addEventListener("click", function() {
+document.getElementById("login-button").addEventListener("click", function () {
   setRole();
 });
 
-document.getElementById("login-button").onclick = function() {
+document.getElementById("login-button").onclick = function () {
   if (role === "player") {
     window.location.href = "player.html";
   } else if (role === "coach") {
@@ -226,21 +226,21 @@ document.getElementById("login-button").onclick = function() {
 function loginfunc() {
   var role = document.querySelector('input[name="role"]:checked').value;
   var loginButton = document.querySelector('#login-button');
-  
+
   // Change the link of the login button based on the role choice
   if (role === 'player') {
-      loginButton.href = 'player.html';
+    loginButton.href = 'player.html';
   } else if (role === 'coach') {
-      loginButton.href = 'coach.html';
+    loginButton.href = 'coach.html';
   }
 }
 
 var loginButton = document.querySelector('#login-button');
-loginButton.addEventListener('click', function(e) {
+loginButton.addEventListener('click', function (e) {
   e.preventDefault(); // Prevent the default behavior of the link
   var href = loginButton.href;
   if (href !== '#') {
-      window.location.href = href; // Redirect to the new link
+    window.location.href = href; // Redirect to the new link
   }
 });
 
@@ -278,6 +278,7 @@ function exibirLista() {
       const label = document.createElement("label");
       label.appendChild(checkbox);
       label.appendChild(document.createTextNode(opcao));
+      label.style.fontSize = "15px";
 
       const listItem = document.createElement("li");
       listItem.appendChild(label);

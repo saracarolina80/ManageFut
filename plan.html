@@ -38,7 +38,7 @@
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"><img src="images/managefut.png"></a>
+               <a class="navbar-brand" href="coach.html"><img src="images/managefut.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -78,23 +78,24 @@
    <div class="container">
       <div class="row">
          <div class="col-md-6 col-lg-6 order-md-1 order-lg-0">
-            <p><b>Choose the exercises!</b></p> <!-- agora fica em negrito -->
+            <p style="font-size: medium;"><b>Choose the exercises!</b></p> <!-- agora fica em negrito -->
             <div style="width: 420px;">
-               <label for="nome_exercicio" style="display: block; float: left;">Name of the exercise:</label>
+               <label for="nome_exercicio" style="display: block; float: left; font-size: 14px;">Name of the
+                  exercise:</label>
                <input type="text" id="nome_exercicio" name="nome_exercicio"
                   style="width: 400px; display: block; float: left;">
 
-               <label for="descricao" style="display: block; float: left;">Description:</label>
+               <label for="descricao" style="display: block; float: left; font-size: 14px">Description:</label>
                <textarea id="descricao" name="descricao" style="width: 400px; height: 200px; float: left;"></textarea>
 
                <br></br><br></br>
                <p>
-                  <span style="display: inline-block; margin-top: 15px;">Duration:</span>
+                  <span style="display: inline-block; margin-top: 15px; font-size: 14px">Duration:</span>
                   <input type="text" id="duracao" name="caixa-texto" style="display: inline-block; width: 40px;">
                   <span style="display: inline-block;">minutos</span>
 
                </p>
-               <label for="num_repeticoes" style="display: block; float: left;">Repetition:</label>
+               <label for="num_repeticoes" style="display: block; float: left; font-size: 14px">Repetitions:</label>
                <input type="text" id="num_repeticoes" name="num_repeticoes"
                   style="width: 30px; display: block; float: left;">
 
@@ -125,7 +126,7 @@
                   <tr>
                      <th scope="col">Name of exercise</th>
                      <th scope="col">Description</th>
-                     <th scope="col">Duration/th>
+                     <th scope="col">Duration</th>
                      <th scope="col">Repetition</th>
                   </tr>
                </thead>
@@ -153,7 +154,7 @@
             Saved!
          </h1>
          <a href="train.html">
-            <button id="close_popup" href="train.html">
+            <button id="close_popup" href="train.html" style="width: 80px;">
                Back
             </button>
          </a>
